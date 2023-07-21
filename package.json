@@ -1,0 +1,28 @@
+{
+  "name": "interactive-rating-component-main",
+  "version": "1.0.0",
+  "description": "A simple interactive form working with the DOM and styling with SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tre3s-byte/interactive-form.git"
+  },
+  "keywords": [
+    "form",
+    "html",
+    "css",
+    "JS",
+    "DOM",
+    "responsive",
+    "front-end"
+  ],
+  "author": "Tre3s-byte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tre3s-byte/interactive-form/issues"
+  },
+  "homepage": "https://github.com/Tre3s-byte/interactive-form#readme"
+}
