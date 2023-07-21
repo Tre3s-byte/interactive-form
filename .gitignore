@@ -14,5 +14,5 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
-.interactive-rating-component-main.zip
+interactive-rating-component-main.zip
 node_modules
