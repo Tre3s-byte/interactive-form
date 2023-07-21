@@ -15,3 +15,4 @@
 .DS_Store
 .prettierignore
 .interactive-rating-component-main.zip
+node_modules
