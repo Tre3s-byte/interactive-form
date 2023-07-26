@@ -4,370 +4,184 @@
 body {
   @include flex-center;
   height: 100vh;
-  flex-flow: nowrap column;
   background: $very-dark-blue;
 }
-@media screen and (max-width: 519px) {
-  body {
-    height: 100vh;
-    background: $very-dark-blue;
+
+.feedBack {
+  @include flex-spaceEvenly(column, baseline);
+  height: 90vw;
+  width: 90vw;
+  min-width: 20em;
+  border-radius: 2.5em;
+  background-image: linear-gradient(
+    0deg,
+    hsl(215deg 26% 13%) 13%,
+    hsl(215deg 24% 14%) 72%,
+    hsl(215deg 23% 14%) 89%,
+    hsl(214deg 21% 15%) 97%,
+    hsl(214deg 20% 16%) 100%
+  );
+  border-radius: 2.5em;
+  > * {
+    margin-left: 4vw;
   }
-  .feedBack {
-    @include flex-spaceEvenly(column, baseline);
-    height: 90vw;
-    width: 90vw;
-    min-width: 20em;
-    border-radius: 2.5em;
-    background-image: linear-gradient(
-      0deg,
-      hsl(215deg 26% 13%) 13%,
-      hsl(215deg 24% 14%) 72%,
-      hsl(215deg 23% 14%) 89%,
-      hsl(214deg 21% 15%) 97%,
-      hsl(214deg 20% 16%) 100%
-    );
-    border-radius: 2.5em;
-    > * {
-      margin-left: 4vw;
+
+  .feedback__img-container {
+    @include flex-center;
+    position: relative;
+    left: 0.2em;
+    width: 3.8em;
+    height: 3.8em;
+    border-radius: 50%;
+    background: $medium-dark-blue;
+
+    .feedback__img {
+      padding: 2vw;
+      width: 5vw;
+      border-radius: 50%;
+      background: $medium-dark-blue;
     }
+  }
+  .feedback__text-container {
+    position: relative;
+    top: -2em;
+    left: 0.5em;
 
-    .feedback__img-container {
-      position: relative;
-      left: 0.8vw;
-
-      .feedback__img {
-        padding: 2vw;
-        width: 5vw;
-        border-radius: 50%;
-        background: $medium-dark-blue;
-      }
+    .feedback__title {
+      font-weight: weight(bold);
+      font-size: 2.2em;
+      color: $white;
+      margin-bottom: 0.5em;
     }
-    .feedback__text-container {
-      position: relative;
-      left: 2vw;
-
-      .feedback__title {
-        font-weight: weight(bold);
-        font-size: 9vw;
-        color: $white;
-        margin-bottom: 0.5em;
-      }
-      .feedback__intro-text {
-        color: $light-grey;
-        font-size: 5vw;
-        width: 87%;
-        line-height: 5vw;
-      }
+    .feedback__intro-text {
+      color: $light-grey;
+      font-size: 1.2em;
+      width: 87%;
+      line-height: 1.5em;
     }
-    .feedback__form {
-      @include flex-center;
-      position: relative;
-      margin: 0;
-      flex-flow: nowrap column;
+  }
+  .feedback__form {
+    @include flex-center;
+    position: relative;
+    top: -2em;
+    margin: 0;
+    flex-flow: nowrap column;
 
-      .form__radio-container {
-        @include flex-spaceEvenly(row, center);
-        margin: 5vw 0;
-        width: 90%;
+    .form__radio-container {
+      @include flex-spaceEvenly(row, center);
+      margin-bottom: 2em;
+      width: 90%;
 
-        .form__radio {
-          display: none;
-          &:checked + .form__label {
-            background-color: $orange;
-            color: $white;
-            &:before {
-              opacity: 1;
-            }
-          }
-        }
-        .form__label {
-          @include flex-center;
-          position: relative;
-          cursor: pointer;
-          transition: all 0.2s ease-out;
-          color: var(--text);
-          width: 12vw;
-          height: 12vw;
-          min-width: 30px;
-          min-height: 30px;
-          background: $light-dark-blue;
-          border-radius: 50%;
-          color: $light-grey;
-          font-size: 5vw;
-          font-weight: weight(regular);
+      .form__radio {
+        display: none;
 
-          &:hover {
-            background: $light-grey;
-            color: $white;
-            font-weight: weight(bold);
-          }
+        &:checked + .form__label {
+          background-color: $orange;
+          color: $white;
 
-          &:nth-of-type(2) {
-            border-left: var(--border-width) solid var(--accent);
-            border-right: var(--border-width) solid var(--accent);
-          }
-
-          &:last-of-type {
-            border-left: var(--border-width) solid var(--accent);
+          &:before {
+            opacity: 1;
           }
         }
       }
-      .feedback__form:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border: var(--border-width) solid var(--accent);
-        border-radius: 999em;
-        pointer-events: none;
-      }
-      .form__button {
-        border: none;
-        background: $orange;
-        width: 83vw;
-        height: 8vw;
-        border-radius: 2em;
-        font-size: 1em;
-        font-weight: weight(regular);
-        color: $white;
-        margin-bottom: 5vw;
-      }
-      .form__button:hover {
-        background: $light-grey;
-        color: $white;
+      .form__label {
+        @include flex-center(column, center);
+        position: relative;
         cursor: pointer;
+        transition: all 0.2s ease-out;
+        color: var(--text);
+        width: 3em;
+        height: 2.9em;
+        background: $light-dark-blue;
+        border-radius: 50%;
+        color: $light-grey;
+        font-size: 1.1em;
         font-weight: weight(regular);
-      }
-      .form__button:active {
-        background-color: $white;
-        font-weight: weight(bold);
-        color: $orange;
+
+        &:hover {
+          background: $light-grey;
+          color: $white;
+          font-weight: weight(bold);
+        }
+
+        &:nth-of-type(2) {
+          border-left: var(--border-width) solid var(--accent);
+          border-right: var(--border-width) solid var(--accent);
+        }
+
+        &:last-of-type {
+          border-left: var(--border-width) solid var(--accent);
+        }
       }
     }
-  }
-  .thanksMessage {
-    @include flex-spaceEvenly(column, center);
-
-    background-image: linear-gradient(
-      0deg,
-      hsl(215deg 26% 13%) 13%,
-      hsl(215deg 24% 14%) 72%,
-      hsl(215deg 23% 14%) 89%,
-      hsl(214deg 21% 15%) 97%,
-      hsl(214deg 20% 16%) 100%
-    );
-    height: 85vw;
-    width: 90vw;
-    min-width: 20em;
-    border-radius: 2.5em;
-
-    .thanks__img {
-      width: 40vw;
+    .feedback__form:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: var(--border-width) solid var(--accent);
+      border-radius: 999em;
+      pointer-events: none;
     }
-    .num__selected {
-      background: $dark-blue;
-      color: $orange;
-      font-size: 3.5vw;
-      padding: 1vh 1.9vw;
-      border-radius: 1.5em;
+    .form__button {
+      border: none;
+      background: $orange;
+      width: 83%;
+      height: 2.4em;
+      border-radius: 2em;
+      font-size: 1em;
       font-weight: weight(regular);
-    }
-    .thanks__title {
-      font-size: 7vw;
       color: $white;
     }
-    .thanks__text {
-      width: 85vw;
-      font-size: 4vw;
-      text-align: center;
-      color: $light-grey;
+    .form__button:hover {
+      background: $light-grey;
+      color: $white;
+      cursor: pointer;
+      font-weight: weight(regular);
+    }
+    .form__button:active {
+      background-color: $white;
+      font-weight: weight(bold);
+      color: $orange;
     }
   }
 }
-@media screen and (min-width: 520px) {
-  body {
-    @include flex-center;
-    height: 100vh;
+.thanksMessage {
+  @include flex-spaceEvenly(column, center);
+  background-image: linear-gradient(
+    0deg,
+    hsl(215deg 26% 13%) 13%,
+    hsl(215deg 24% 14%) 72%,
+    hsl(215deg 23% 14%) 89%,
+    hsl(214deg 21% 15%) 97%,
+    hsl(214deg 20% 16%) 100%
+  );
+  height: 50vh;
+  width: 27vw;
+  min-width: 32em;
+  border-radius: 2.5em;
 
-    background: $very-dark-blue;
+  .thanks__img {
+    width: 40%;
   }
-  .feedBack {
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: nowrap column;
-
-    background-image: linear-gradient(
-      0deg,
-      hsl(215deg 26% 13%) 13%,
-      hsl(215deg 24% 14%) 72%,
-      hsl(215deg 23% 14%) 89%,
-      hsl(214deg 21% 15%) 97%,
-      hsl(214deg 20% 16%) 100%
-    );
-    height: 50vh;
-    width: 27vw;
-    min-width: 32em;
-    border-radius: 2.5em;
-    > * {
-      margin-left: 2em;
-    }
-
-    .feedback__img-container {
-      @include flex-center;
-      position: relative;
-      left: 0.2em;
-      width: 3.8em;
-      height: 3.8em;
-      border-radius: 50%;
-      background: $medium-dark-blue;
-
-      .feedback__img {
-        width: 1.3em;
-      }
-    }
-    .feedback__text-container {
-      position: relative;
-      top: -2em;
-      left: 0.5em;
-
-      .feedback__title {
-        font-weight: weight(bold);
-        font-size: 2.2em;
-        color: $white;
-        margin-bottom: 0.5em;
-      }
-      .feedback__intro-text {
-        color: $light-grey;
-        font-size: 1.2em;
-        width: 87%;
-        line-height: 1.5em;
-      }
-    }
-    .feedback__form {
-      @include flex-center;
-      position: relative;
-      top: -2em;
-      margin: 0;
-      flex-flow: nowrap column;
-
-      .form__radio-container {
-        @include flex-spaceEvenly(row, center);
-        margin-bottom: 2em;
-        width: 90%;
-
-        .form__radio {
-          display: none;
-
-          &:checked + .form__label {
-            background-color: $orange;
-            color: $white;
-
-            &:before {
-              opacity: 1;
-            }
-          }
-        }
-        .form__label {
-          @include flex-center(column, center);
-          position: relative;
-          cursor: pointer;
-          transition: all 0.2s ease-out;
-          color: var(--text);
-          width: 3em;
-          height: 2.9em;
-          background: $light-dark-blue;
-          border-radius: 50%;
-          color: $light-grey;
-          font-size: 1.1em;
-          font-weight: weight(regular);
-
-          &:hover {
-            background: $light-grey;
-            color: $white;
-            font-weight: weight(bold);
-          }
-
-          &:nth-of-type(2) {
-            border-left: var(--border-width) solid var(--accent);
-            border-right: var(--border-width) solid var(--accent);
-          }
-
-          &:last-of-type {
-            border-left: var(--border-width) solid var(--accent);
-          }
-        }
-      }
-      .feedback__form:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border: var(--border-width) solid var(--accent);
-        border-radius: 999em;
-        pointer-events: none;
-      }
-      .form__button {
-        border: none;
-        background: $orange;
-        width: 83%;
-        height: 2.4em;
-        border-radius: 2em;
-        font-size: 1em;
-        font-weight: weight(regular);
-        color: $white;
-      }
-      .form__button:hover {
-        background: $light-grey;
-        color: $white;
-        cursor: pointer;
-        font-weight: weight(regular);
-      }
-      .form__button:active {
-        background-color: $white;
-        font-weight: weight(bold);
-        color: $orange;
-      }
-    }
+  .num__selected {
+    background: $dark-blue;
+    color: $orange;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    border-radius: 1.5em;
+    font-weight: weight(regular);
   }
-  .thanksMessage {
-    @include flex-spaceEvenly(column, center);
-    background-image: linear-gradient(
-      0deg,
-      hsl(215deg 26% 13%) 13%,
-      hsl(215deg 24% 14%) 72%,
-      hsl(215deg 23% 14%) 89%,
-      hsl(214deg 21% 15%) 97%,
-      hsl(214deg 20% 16%) 100%
-    );
-    height: 50vh;
-    width: 27vw;
-    min-width: 32em;
-    border-radius: 2.5em;
-
-    .thanks__img {
-      width: 40%;
-    }
-    .num__selected {
-      background: $dark-blue;
-      color: $orange;
-      font-size: 1.1em;
-      padding: 0.5em 1em;
-      border-radius: 1.5em;
-      font-weight: weight(regular);
-    }
-    .thanks__title {
-      font-size: 2em;
-      color: $white;
-    }
-    .thanks__text {
-      width: 85%;
-      font-size: 1.2em;
-      text-align: center;
-      color: $light-grey;
-    }
+  .thanks__title {
+    font-size: 2em;
+    color: $white;
+  }
+  .thanks__text {
+    width: 85%;
+    font-size: 1.2em;
+    text-align: center;
+    color: $light-grey;
   }
 }
