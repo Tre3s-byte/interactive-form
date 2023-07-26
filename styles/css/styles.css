@@ -1,6 +1,116 @@
-* {
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
   font-family: "Overpass", sans-serif;
 }
 
@@ -14,10 +124,101 @@
 }
 
 body {
-  width: 100vh;
   height: 100vh;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  background: hsl(216, 12%, 8%);
 }
 
-#container {
-  width: 50vw;
+@media screen and (min-width: 520px) {
+  .feedBack {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-around;
+    background: hsl(215, 23%, 15%);
+    height: 50vh;
+    width: 27vw;
+    min-width: 32em;
+    border-radius: 2.5em;
+  }
+  .feedBack > * {
+    margin-left: 2em;
+  }
+  .feedBack .feedback__img-container {
+    position: relative;
+    top: -1.8em;
+    left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.8em;
+    height: 3.8em;
+    border-radius: 50%;
+    background: hsl(220, 16%, 19%);
+  }
+  .feedBack .feedback__img-container .feedback__img {
+    width: 1.3em;
+  }
+  .feedBack .feedback__text-container {
+    position: relative;
+    top: -5.5em;
+    left: 0.5em;
+  }
+  .feedBack .feedback__text-container .feedback__title {
+    font-weight: 700;
+    font-size: 2.2em;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0.5em;
+  }
+  .feedBack .feedback__text-container .feedback__intro-text {
+    color: hsl(217, 12%, 63%);
+    font-size: 1.2em;
+    width: 87%;
+    line-height: 1.5em;
+  }
+  .feedBack .feedback__form {
+    position: relative;
+    top: -2em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+  }
+  .feedBack .feedback__form .form__radio-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .feedBack .feedback__form .form__radio-container .form__radio {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #1fbed6;
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .feedBack .feedback__form .form__radio-container .form__radio:focus {
+    outline: none;
+  }
+  .feedBack .feedback__form .form__radio-container .form__radio:checked {
+    background-color: #1fbed6;
+  }
+  .feedBack .feedback__form .form__radio-container .form__radio:checked ~ .radio-value:first-of-type {
+    color: hsl(0, 0%, 100%);
+  }
+  .feedBack .feedback__form .form__radio-container .form__label .radio-value:first-of-type {
+    position: relative;
+    left: -27px;
+    font-size: 15px;
+    color: #1fbed6;
+  }
+  .feedBack .feedback__form .form__radio-container .form__label .radio-value {
+    position: relative;
+    top: -12px;
+  }
 }/*# sourceMappingURL=styles.css.map */
