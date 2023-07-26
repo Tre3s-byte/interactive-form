@@ -8,24 +8,28 @@ const infoTags = `
        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
      </p>
     </div>
-     
+
 `;
-const formTags = `   
+const formTags = `
 <form action="#" class="feedback__form">
 
 <div class="form__radio-container">
-        <label for="1" class="form__label"><input type="radio" id="1" name="rate-num" value="1" class="form__radio" /><span class="radio-value">1</span></label>
+        <input type="radio" id="1" name="rate-num" value="1" class="form__radio" />
+        <label for="1" class="form__label">1</label>
 
-        <label for="2" class="form__label"> <input type="radio" id="2" name="rate-num" value="2" class="form__radio" /><span class="radio-value">2</span></label>
+        <input type="radio" id="2" name="rate-num" value="2" class="form__radio" />
+        <label for="2" class="form__label">2</label>
 
-        <label for="3" class="form__label"> <input type="radio" id="3" name="rate-num" value="3" class="form__radio" /><span class="radio-value">3</span></label>
+        <input type="radio" id="3" name="rate-num" value="3" class="form__radio" />
+        <label for="3" class="form__label">3</label>
 
-        <label for="4" class="form__label"> <input type="radio" id="4" name="rate-num" value="4" class="form__radio" /><span class="radio-value">4</span></label>
+        <input type="radio" id="4" name="rate-num" value="4" class="form__radio" />
+        <label for="4" class="form__label">4</label>
 
-        <label for="5" class="form__label"> <input type="radio" id="5" name="rate-num" value="5" class="form__radio" /><span class="radio-value">5</span></label>
-      </div>
-
-<input type="submit" value="Submit" class="form__button" />
+        <input type="radio" id="5" name="rate-num" value="5" class="form__radio" />
+        <label for="5" class="form__label">5</label>
+</div>
+<input type="submit" value="SUBMIT" class="form__button" />
 </form>
 `;
 
@@ -47,12 +51,11 @@ form.addEventListener("submit", function (event) {
     // Save the selected value to session storage
     sessionStorage.setItem("selectedValue", selectedValue);
     const thanksTags = `
-    <img src="./images/illustration-thank-you.svg" alt="" class="" />
-    <h3>You selected out ${selectedValue} of 5</h3>
-    <h1>Thank you!</h1>
-    <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
-    </main>
-    
+    <img src="./images/illustration-thank-you.svg" alt="" class="thanks__img" />
+    <h3 class="num__selected">You selected out ${selectedValue} of 5</h3>
+    <h1 class="thanks__title">Thank you!</h1>
+    <p class="thanks__text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+
     `;
     // Redirect to the next webpage
     window.location.href = this.action;
