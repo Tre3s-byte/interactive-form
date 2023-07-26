@@ -148,6 +148,7 @@ body {
     }
   }
 }
+
 .thanksMessage {
   @include flex-spaceEvenly(column, center);
   background-image: linear-gradient(
