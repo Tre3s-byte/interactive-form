@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/Tre3s-byte/interactive-form#readme",
   "devDependencies": {
-    "sass": "^1.64.0"
+    "sass": "^1.64.0",
+    "stylelint-config-prettier-scss": "^1.0.0"
   }
 }
