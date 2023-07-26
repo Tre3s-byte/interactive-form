@@ -6,6 +6,11 @@
   justify-content: center;
   align-items: center;
 }
+@mixin flex-spaceEvenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 $dark-cobalt: #3e52a3;
 $orange: #fb7413;
 $white: #ffffff;
