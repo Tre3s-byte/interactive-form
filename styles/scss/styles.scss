@@ -2,11 +2,9 @@
 @import "./variable";
 
 body {
+  @include flex-center;
   height: 100vh;
-  display: flex;
   flex-flow: nowrap column;
-  justify-content: center;
-  align-items: center;
   background: $very-dark-blue;
 }
 @media screen and (max-width: 519px) {
@@ -70,12 +68,11 @@ body {
       }
     }
     .feedback__form {
+      @include flex-center;
       position: relative;
 
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
       flex-flow: nowrap column;
 
       .form__radio-container {
@@ -99,9 +96,7 @@ body {
           }
         }
         .form__label {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex-center;
 
           position: relative;
           cursor: pointer;
@@ -211,11 +206,9 @@ body {
 }
 @media screen and (min-width: 520px) {
   body {
+    @include flex-center;
     height: 100vh;
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    align-items: center;
+
     background: $very-dark-blue;
   }
   .feedBack {
@@ -239,12 +232,11 @@ body {
     }
 
     .feedback__img-container {
+      @include flex-center;
       position: relative;
 
       left: 0.2em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
       width: 3.8em;
       height: 3.8em;
       border-radius: 50%;
@@ -273,12 +265,11 @@ body {
       }
     }
     .feedback__form {
+      @include flex-center;
       position: relative;
       top: -2em;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
       flex-flow: nowrap column;
 
       .form__radio-container {

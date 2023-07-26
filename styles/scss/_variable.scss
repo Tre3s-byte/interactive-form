@@ -1,6 +1,11 @@
 @function weight($weight-name) {
   @return map-get($font-weights, $weight-name);
 }
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 $dark-cobalt: #3e52a3;
 $orange: #fb7413;
 $white: #ffffff;
