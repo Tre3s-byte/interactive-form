@@ -115,8 +115,10 @@ table {
 }
 
 .attribution {
+  margin-top: 0.5em;
   font-size: 11px;
   text-align: center;
+  color: #959eac;
 }
 
 .attribution a {
@@ -138,46 +140,49 @@ body {
     background: #121417;
   }
   .feedBack {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-evenly;
+    height: 90vw;
+    width: 90vw;
+    min-width: 20em;
+    border-radius: 2.5em;
     background-image: linear-gradient(0deg, hsl(215, 26%, 13%) 13%, hsl(215, 24%, 14%) 72%, hsl(215, 23%, 14%) 89%, hsl(214, 21%, 15%) 97%, hsl(214, 20%, 16%) 100%);
     border-radius: 2.5em;
   }
   .feedBack > * {
-    margin-left: 2em;
+    margin-left: 4vw;
   }
   .feedBack .feedback__img-container {
     position: relative;
-    left: 0.2em;
+    left: 0.8vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.8em;
-    height: 3.8em;
+    align-items: flex-start;
+  }
+  .feedBack .feedback__img-container .feedback__img {
+    padding: 2vw;
+    width: 5vw;
     border-radius: 50%;
     background: #181f29;
   }
-  .feedBack .feedback__img-container .feedback__img {
-    width: 1.3em;
-  }
   .feedBack .feedback__text-container {
     position: relative;
-    top: -2em;
-    left: 0.5em;
+    left: 2vw;
   }
   .feedBack .feedback__text-container .feedback__title {
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 9vw;
     color: #ffffff;
     margin-bottom: 0.5em;
   }
   .feedBack .feedback__text-container .feedback__intro-text {
     color: #959eac;
-    font-size: 1.2em;
+    font-size: 5vw;
     width: 87%;
-    line-height: 1.5em;
+    line-height: 5vw;
   }
   .feedBack .feedback__form {
     position: relative;
-    top: -2em;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -187,7 +192,7 @@ body {
   .feedBack .feedback__form .form__radio-container {
     display: flex;
     flex-flow: nowrap row;
-    margin-bottom: 2em;
+    margin: 5vw 0;
     justify-content: space-around;
     align-items: center;
     width: 90%;
@@ -210,12 +215,14 @@ body {
     cursor: pointer;
     transition: all 0.2s ease-out;
     color: var(--text);
-    width: 3em;
-    height: 2.9em;
+    width: 12vw;
+    height: 12vw;
+    min-width: 30px;
+    min-height: 30px;
     background: #262f38;
     border-radius: 50%;
     color: #959eac;
-    font-size: 1.1em;
+    font-size: 5vw;
     font-weight: 400;
   }
   .feedBack .feedback__form .form__radio-container .form__label:hover {
@@ -244,12 +251,13 @@ body {
   .feedBack .feedback__form .form__button {
     border: none;
     background: #fb7413;
-    width: 83%;
-    height: 2.4em;
+    width: 83vw;
+    height: 8vw;
     border-radius: 2em;
     font-size: 1em;
     font-weight: 400;
     color: #ffffff;
+    margin-bottom: 5vw;
   }
   .feedBack .feedback__form .form__button:hover {
     background: #959eac;
@@ -268,202 +276,29 @@ body {
     justify-content: space-evenly;
     align-items: center;
     background-image: linear-gradient(0deg, hsl(215, 26%, 13%) 13%, hsl(215, 24%, 14%) 72%, hsl(215, 23%, 14%) 89%, hsl(214, 21%, 15%) 97%, hsl(214, 20%, 16%) 100%);
-    height: 50vh;
-    width: 25vw;
-    min-width: 25em;
+    height: 85vw;
+    width: 90vw;
+    min-width: 20em;
     border-radius: 2.5em;
   }
   .thanksMessage .thanks__img {
-    width: 40%;
+    width: 40vw;
   }
   .thanksMessage .num__selected {
     background: #212831;
     color: #fb7413;
-    font-size: 1.1em;
-    padding: 0.5em 1em;
+    font-size: 3.5vw;
+    padding: 1vh 1.9vw;
     border-radius: 1.5em;
     font-weight: 400;
   }
   .thanksMessage .thanks__title {
-    font-size: 2em;
+    font-size: 7vw;
     color: #ffffff;
   }
   .thanksMessage .thanks__text {
-    width: 85%;
-    font-size: 1.2em;
-    text-align: center;
-    color: #959eac;
-  }
-}
-@media screen and (min-width: 520px) {
-  body {
-    height: 100vh;
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    align-items: center;
-    background: #121417;
-  }
-  .feedBack {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: space-around;
-    background-image: linear-gradient(0deg, hsl(215, 26%, 13%) 13%, hsl(215, 24%, 14%) 72%, hsl(215, 23%, 14%) 89%, hsl(214, 21%, 15%) 97%, hsl(214, 20%, 16%) 100%);
-    height: 50vh;
-    width: 27vw;
-    min-width: 32em;
-    border-radius: 2.5em;
-  }
-  .feedBack > * {
-    margin-left: 2em;
-  }
-  .feedBack .feedback__img-container {
-    position: relative;
-    left: 0.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.8em;
-    height: 3.8em;
-    border-radius: 50%;
-    background: #181f29;
-  }
-  .feedBack .feedback__img-container .feedback__img {
-    width: 1.3em;
-  }
-  .feedBack .feedback__text-container {
-    position: relative;
-    top: -2em;
-    left: 0.5em;
-  }
-  .feedBack .feedback__text-container .feedback__title {
-    font-weight: 700;
-    font-size: 2.2em;
-    color: #ffffff;
-    margin-bottom: 0.5em;
-  }
-  .feedBack .feedback__text-container .feedback__intro-text {
-    color: #959eac;
-    font-size: 1.2em;
-    width: 87%;
-    line-height: 1.5em;
-  }
-  .feedBack .feedback__form {
-    position: relative;
-    top: -2em;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: nowrap column;
-  }
-  .feedBack .feedback__form .form__radio-container {
-    display: flex;
-    flex-flow: nowrap row;
-    margin-bottom: 2em;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
-  }
-  .feedBack .feedback__form .form__radio-container .form__radio {
-    display: none;
-  }
-  .feedBack .feedback__form .form__radio-container .form__radio:checked + .form__label {
-    background-color: #fb7413;
-    color: #ffffff;
-  }
-  .feedBack .feedback__form .form__radio-container .form__radio:checked + .form__label:before {
-    opacity: 1;
-  }
-  .feedBack .feedback__form .form__radio-container .form__label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    color: var(--text);
-    width: 3em;
-    height: 2.9em;
-    background: #262f38;
-    border-radius: 50%;
-    color: #959eac;
-    font-size: 1.1em;
-    font-weight: 400;
-  }
-  .feedBack .feedback__form .form__radio-container .form__label:hover {
-    background: #959eac;
-    color: #ffffff;
-    font-weight: 700;
-  }
-  .feedBack .feedback__form .form__radio-container .form__label:nth-of-type(2) {
-    border-left: var(--border-width) solid var(--accent);
-    border-right: var(--border-width) solid var(--accent);
-  }
-  .feedBack .feedback__form .form__radio-container .form__label:last-of-type {
-    border-left: var(--border-width) solid var(--accent);
-  }
-  .feedBack .feedback__form .feedback__form:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: var(--border-width) solid var(--accent);
-    border-radius: 999em;
-    pointer-events: none;
-  }
-  .feedBack .feedback__form .form__button {
-    border: none;
-    background: #fb7413;
-    width: 83%;
-    height: 2.4em;
-    border-radius: 2em;
-    font-size: 1em;
-    font-weight: 400;
-    color: #ffffff;
-  }
-  .feedBack .feedback__form .form__button:hover {
-    background: #959eac;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: 400;
-  }
-  .feedBack .feedback__form .form__button:active {
-    background-color: #ffffff;
-    font-weight: 700;
-    color: #fb7413;
-  }
-  .thanksMessage {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: linear-gradient(0deg, hsl(215, 26%, 13%) 13%, hsl(215, 24%, 14%) 72%, hsl(215, 23%, 14%) 89%, hsl(214, 21%, 15%) 97%, hsl(214, 20%, 16%) 100%);
-    height: 50vh;
-    width: 27vw;
-    min-width: 32em;
-    border-radius: 2.5em;
-  }
-  .thanksMessage .thanks__img {
-    width: 40%;
-  }
-  .thanksMessage .num__selected {
-    background: #212831;
-    color: #fb7413;
-    font-size: 1.1em;
-    padding: 0.5em 1em;
-    border-radius: 1.5em;
-    font-weight: 400;
-  }
-  .thanksMessage .thanks__title {
-    font-size: 2em;
-    color: #ffffff;
-  }
-  .thanksMessage .thanks__text {
-    width: 85%;
-    font-size: 1.2em;
+    width: 85vw;
+    font-size: 4vw;
     text-align: center;
     color: #959eac;
   }

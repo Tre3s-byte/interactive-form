@@ -15,8 +15,10 @@ $font-weights: (
   "bold": 700,
 );
 .attribution {
+  margin-top: 0.5em;
   font-size: 11px;
   text-align: center;
+  color: $light-grey;
 }
 .attribution a {
   color: $dark-cobalt;
