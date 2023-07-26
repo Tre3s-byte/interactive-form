@@ -13,9 +13,7 @@ body {
     background: $very-dark-blue;
   }
   .feedBack {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: space-evenly;
+    @include flex-spaceEvenly(column, baseline);
     height: 90vw;
     width: 90vw;
     min-width: 20em;
@@ -28,7 +26,6 @@ body {
       hsl(214deg 21% 15%) 97%,
       hsl(214deg 20% 16%) 100%
     );
-
     border-radius: 2.5em;
     > * {
       margin-left: 4vw;
@@ -37,13 +34,9 @@ body {
     .feedback__img-container {
       position: relative;
       left: 0.8vw;
-      display: flex;
-
-      align-items: flex-start;
 
       .feedback__img {
         padding: 2vw;
-
         width: 5vw;
         border-radius: 50%;
         background: $medium-dark-blue;
@@ -51,7 +44,6 @@ body {
     }
     .feedback__text-container {
       position: relative;
-
       left: 2vw;
 
       .feedback__title {
@@ -70,25 +62,19 @@ body {
     .feedback__form {
       @include flex-center;
       position: relative;
-
       margin: 0;
-
       flex-flow: nowrap column;
 
       .form__radio-container {
-        @include flex-spaceEvenly;
-        flex-flow: nowrap row;
+        @include flex-spaceEvenly(row, center);
         margin: 5vw 0;
-
         width: 90%;
 
         .form__radio {
           display: none;
-
           &:checked + .form__label {
             background-color: $orange;
             color: $white;
-
             &:before {
               opacity: 1;
             }
@@ -96,7 +82,6 @@ body {
         }
         .form__label {
           @include flex-center;
-
           position: relative;
           cursor: pointer;
           transition: all 0.2s ease-out;
@@ -163,8 +148,7 @@ body {
     }
   }
   .thanksMessage {
-    @include flex-spaceEvenly;
-    flex-flow: nowrap column;
+    @include flex-spaceEvenly(column, center);
 
     background-image: linear-gradient(
       0deg,
@@ -233,9 +217,7 @@ body {
     .feedback__img-container {
       @include flex-center;
       position: relative;
-
       left: 0.2em;
-
       width: 3.8em;
       height: 3.8em;
       border-radius: 50%;
@@ -271,10 +253,8 @@ body {
       flex-flow: nowrap column;
 
       .form__radio-container {
-        @include flex-spaceEvenly;
+        @include flex-spaceEvenly(row, center);
         margin-bottom: 2em;
-
-        flex-flow: nowrap row;
         width: 90%;
 
         .form__radio {
@@ -290,10 +270,7 @@ body {
           }
         }
         .form__label {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
+          @include flex-center(column, center);
           position: relative;
           cursor: pointer;
           transition: all 0.2s ease-out;
@@ -357,8 +334,7 @@ body {
     }
   }
   .thanksMessage {
-    @include flex-spaceEvenly;
-    flex-flow: nowrap column;
+    @include flex-spaceEvenly(column, center);
 
     background-image: linear-gradient(
       0deg,

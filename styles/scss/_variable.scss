@@ -6,10 +6,12 @@
   justify-content: center;
   align-items: center;
 }
-@mixin flex-spaceEvenly {
+@mixin flex-spaceEvenly($direction, $align) {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: nowrap;
 }
 $dark-cobalt: #3e52a3;
 $orange: #fb7413;
