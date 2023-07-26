@@ -1,0 +1,114 @@
+@import "./reset";
+@import "./variable";
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  background: $very-dark-blue;
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (min-width: 520px) {
+  .feedBack {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-around;
+    background: $dark-blue;
+    height: 50vh;
+    width: 27vw;
+    min-width: 32em;
+    border-radius: 2.5em;
+    > * {
+      margin-left: 2em;
+    }
+
+    .feedback__img-container {
+      position: relative;
+      top: -1.8em;
+      left: 0.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.8em;
+      height: 3.8em;
+      border-radius: 50%;
+      background: $medium-dark-blue;
+
+      .feedback__img {
+        width: 1.3em;
+      }
+    }
+    .feedback__text-container {
+      position: relative;
+      top: -5.5em;
+      left: 0.5em;
+
+      .feedback__title {
+        font-weight: weight(bold);
+        font-size: 2.2em;
+        color: $white;
+        margin-bottom: 0.5em;
+      }
+      .feedback__intro-text {
+        color: $light-grey;
+        font-size: 1.2em;
+        width: 87%;
+        line-height: 1.5em;
+      }
+    }
+    .feedback__form {
+      position: relative;
+      top: -2em;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: nowrap column;
+
+      .form__radio-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        .form__radio {
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          border: 2px solid #1fbed6;
+          background-color: white;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+
+          &:focus {
+            outline: none;
+          }
+          &:checked {
+            background-color: #1fbed6;
+          }
+          &:checked ~ .radio-value:first-of-type {
+            color: $white;
+          }
+        }
+        .form__label {
+          .radio-value:first-of-type {
+            position: relative;
+            left: -27px;
+            font-size: 15px;
+            color: #1fbed6;
+          }
+          .radio-value {
+            position: relative;
+            top: -12px;
+          }
+        }
+      }
+    }
+  }
+}
